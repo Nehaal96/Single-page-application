@@ -1,0 +1,48 @@
+ <div class="jumbotron text-center">
+	<h1>Login Page</h1>
+	
+	
+</div>
+<div ng-controller="userController">
+<div  class="container">
+  
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+    
+    <div class="col-md-4" >
+      <section class="login-form">
+        <form id="users" method="post">
+          
+          <input type="text" ng-model="user.username" name="username" placeholder="username" required class="form-control input-lg"  />
+          
+          <input type="password" ng-model="user.password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+          
+          
+          <div class="pwstrength_viewport_progress"></div>
+          
+          
+          <button  type="submit"  class="btn btn-lg btn-primary btn-block" ng-click="loginuser()">Login</button>
+          <div>
+            <a href="#/registration">Create account</a> 
+          </div>
+          
+        </form>    
+        
+      </section>  
+      </div>
+      
+      <div class="col-md-4"></div>
+      
+
+  </div>
+  
+  <p>
+    <br>
+    <br>
+    
+  </p>     
+  
+  </div>
+</div> 
+
+

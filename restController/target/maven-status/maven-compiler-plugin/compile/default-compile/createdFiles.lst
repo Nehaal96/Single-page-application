@@ -1,0 +1,10 @@
+com\niit\Controller\ProfilePictureController.class
+com\niit\Controller\ForumController.class
+com\niit\Controller\ChatController.class
+com\niit\Controller\JobController.class
+com\niit\Config\WebSocketConfig.class
+com\niit\Controller\BlogController.class
+com\niit\Controller\FriendController.class
+com\niit\Controller\UserController.class
+com\niit\Config\WebInitializer.class
+com\niit\Config\WebResolver.class

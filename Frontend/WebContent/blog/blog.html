@@ -1,0 +1,58 @@
+<center>
+	<b font-size="6">Add Blog </b>
+</center>
+<div ng-controller="blogController">
+	<div class="container">
+		<div class="col-lg-12 well">
+			<div class="row">
+				<form data-ng-submit="insertBlog()" name="blogform">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>Blog Name</label> <input type="text"
+									data-ng-model="blog.blogName"
+									placeholder="Blog Name" class="form-control">
+							</div>
+						</div>
+						
+							<div class="card-body">
+							<label>Blog Content</label> <input type="text"
+								data-ng-model="blog.blogContent"
+								placeholder="Blog Content" class="form-control" rows="3">
+						</div>
+					</div>
+
+					<div class="col-auto">
+						<button type="submit"  class="btn btn-primary btn-block">Submit</button>
+					</div>
+
+				</form>
+				</div>
+				</div>
+				</div>
+				
+
+				<br />
+				<div class="table-responsive">
+					<table id="myTable" class="table table-striped">
+						<thead>
+
+							<tr class="bg-primary">
+								<td><b>Blog Name</b></td>
+								<td><b>Blog Content</b></td>
+								<td><b>Likes</b></td>
+								<td><b>Operations</b></td>
+							</tr>
+						</thead>
+						<tr class="bg-success" ng-repeat="blog in blogdata">
+							<td>{{blog.blogName}}</td>
+							<td>{{blog.blogContent}}</td>
+							<td>{{blog.likes}}</td>
+							
+							<td colspan="2"><center><input type="submit" value="Like" ng-click="likeBlog(blog.blogId)"/>
+							<input type="submit" value=" Delete Blog" ng-click="deleteBlog(blog.blogId)"></center></td>
+						</tr>
+
+					</table>
+				</div>
+			</div>

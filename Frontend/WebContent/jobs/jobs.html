@@ -1,0 +1,53 @@
+<center>
+	<b font-size="6">Jobs Page</b>
+</center>
+<div ng-controller="jobsController">
+
+	<form id="Jobsform" data-ng-submit="insertJobs()"method="post">
+		<table align="center" width="80%" border="1">
+			<tr>
+				<td>Job Profile</td>
+				<td><input type="text" name="jobProfile" data-ng-model="jobs.jobProfile"/></td>
+			</tr>
+			<tr>
+				<td>Job Qualfication</td>
+				<td><input type="text" name="qualification" data-ng-model="jobs.qualification"/></td>
+			</tr>
+			<tr>
+				<td>Job Description</td>
+				<td><textarea cols="30" row="10" name="jobDesc" data-ng-model="jobs.jobDesc" /></textarea></td>
+			</tr>
+			<tr>
+				<td>Approve</td>
+				<td><input type="text""  name="jobapprove" data-ng-model="jobs.jobapprove" /></textarea></td>
+			</tr>
+			<tr>
+				<td>Reject</td>
+				<td><input type="text"  name="jobreject" data-ng-model="jobs.jobreject" /></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2"><center><input type="submit" value="Insert Jobs" ></center></td>
+		</table>
+	</form>
+
+<br/>
+	<div class="table-responsive">
+	<table id="myTable" class="table table-striped" width="100%" >
+		
+		<tr bgcolor="orange">
+			<td>Jobs Profile</td>
+			<td>Jobs Qualification</td>
+			<td>Jobs Description</td>
+			<td>Jobs Approve</td>
+			<td>Jobs Reject</td>
+		</tr>
+		<tr bgcolor="cyan" ng-repeat="jobs in jobsdata">
+			<td>{{jobs.jobProfile}}</td>
+			<td>{{jobs.qualification}}</td>
+			<td>{{jobs.jobDesc}}
+			<td>{{jobs.approve}}
+			<td>{{jobs.reject}}
+		</tr>
+
+	</table>
+</div>

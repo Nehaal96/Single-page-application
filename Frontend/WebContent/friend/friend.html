@@ -1,0 +1,13 @@
+<div ng-controller="userController">
+	<table class="table table-dark">
+		<tr bgcolor="cyan">
+			<td colspan="4"><center>Friend List</center></td>
+		<tr ng-repeat="user in allusers" bgcolor="orange">
+			<td>{{user.username}}</td>
+			
+			<td ng-show="user.isOnline=='Y'">Online</td>
+			<td ng-show="user.isOffline=='N'">Offline</td>
+			<td><input type=submit value="Add Friend"  ng-controller="friendController" ng-click="addFriend(friend.friendname)"></td>
+			
+	</table>
+</div>

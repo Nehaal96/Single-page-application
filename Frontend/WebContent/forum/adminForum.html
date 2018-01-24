@@ -1,0 +1,25 @@
+<div ng-controller="adminForumController">
+	<form id="adminForumform" method="post">
+		<div class="table-responsive">
+	<table id="myTable" class="table table-striped" >	
+
+			<tr bgcolor="orange">
+				<td>Forum Name</td>
+				<td>Forum Content</td>
+				<td colspan="2">Operations</td>
+			</tr>
+			<tr bgcolor="cyan" ng-repeat="forum in forumdata">
+				<td><a href="ForumPage">{{forum.forumName}}</a></td>
+				<td>{{forum.forumContent}}</td>
+				<td ng-show="forum.status=='NA'">
+				<input type="submit" value="Approve" ng-click="approveForum(forum.forumId)"/></td>
+				<td ng-show="forum.status=='A'">
+				<input type="submit" value="Reject" ng-click="rejectForum(forum.forumId)" /></td>
+						
+			</tr>
+		</table>
+
+	</form>
+
+
+</div>

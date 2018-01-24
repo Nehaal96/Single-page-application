@@ -1,0 +1,31 @@
+<div ng-controller="jobsController">
+<div class="table-responsive">
+	<table id="myTable" class="table table-striped" >		
+		<tr bgcolor="blue">
+			<td>Jobs Profile</td>
+			<td>Jobs Qualification</td>
+			<td>Jobs Description</td>
+			<td>Jobs Approve</td>
+			<td>Jobs Reject</td>
+		</tr>
+		<tr bgcolor="success" ng-repeat="jobs in jobsdata">
+			<td>{{jobs.jobProfile}}</td>
+			<td>{{jobs.qualification}}</td>
+			<td>{{jobs.jobDesc}}</td>
+			<td>{{jobs.approve}}</td>
+			<td>{{jobs.reject}}</td>
+		</tr>
+       <tr bgcolor="cyan" ng-repeat="jobs in jobsdata">
+				<td>{{jobs.jobProfile}}</a></td>
+				<td>{{jobs.qualification}}</td>
+			    <td>{{jobs.jobDesc}}</td>
+			    <td>{{jobs.approve}}</td>
+			    <td>{{jobs.reject}}</td>
+				<td ng-show="jobs.status=='NA'">
+				<input type="submit" value="Approve" ng-click="approveJobs(jobs.jobId)"/></td>
+				<td ng-show="jobs.status=='A'">
+				<input type="submit" value="Reject" ng-click="rejectJobs(jobs.jobId)" /></td>
+						
+			</tr>
+	</table>
+	</div>
